@@ -1,0 +1,14 @@
+#N canvas -11 -11 1920 956 10;
+#X obj 29 10 loadbang;
+#X obj 27 42 metro 100;
+#X obj 28 80 f;
+#X obj 33 238 print distance:;
+#X obj 124 49 r ultra1;
+#X obj 143 79 r ultra2;
+#X obj 131 169 print distance2:;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 6 0;
+#X connect 4 0 2 1;
+#X connect 5 0 2 1;
