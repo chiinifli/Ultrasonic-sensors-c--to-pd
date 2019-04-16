@@ -27,7 +27,6 @@ extern "C" {
 // ------------------------------------------------------------------------------------------------------
 // Variables for the first ultrasonic sensor 
 PulseIn pulseIn;  // Detects pulses (not really sure about this)
-Scope scope; // An oscilloscope which allows data to be visualised in a browser in real time.
 int gTriggerInterval = 2646; // how often to send out a trigger. 2646 samples are 60ms 
 int gMinPulseLength = 7; //to avoid spurious readings
 float gRescale = 58; // taken from the datasheet
@@ -44,7 +43,6 @@ int gPrintfCount = 0;
 // For the second ultrasonic sensor 
 
 PulseIn pulseIn2;
-Scope scope2;
 int gTriggerInterval2 = 2646; // how often to send out a trigger. 2646 samples are 60ms 
 int gMinPulseLength2 = 7; //to avoid spurious readings
 float gRescale2 = 58; // taken from the datasheet
@@ -339,7 +337,7 @@ void fdLoop(void* arg){
 }
 #endif /* PD_THREADED_IO */
 
-//Scope scope;
+Scope scope; // An oscilloscope which allows data to be visualised in a browser in real time.
 float* gScopeOut;
 void* gPatch;
 bool gDigitalEnabled = 0;
